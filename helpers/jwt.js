@@ -1,7 +1,6 @@
-// const expressJwt = require('express-jwt');
+
 const expressJwt = require('express-jwt');
-// const { path } = require('express/lib/application');
-// {url: `${api}/products`, methods: 'GET', 'OPTIONS'},
+
 function authJwt() {
     const secret = process.env.secret;
     const api = process.env.API_URL;
