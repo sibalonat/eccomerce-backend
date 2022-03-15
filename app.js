@@ -20,6 +20,9 @@ const usersRouter = require('./routers/users');
 
 app.use(express.json());
 app.use(morgan('tiny'));
+app.use(authJwt);
+
+
 app.use(`${api}/products`, productsRouter);
 app.use(`${api}/categories`, categoriesRouter);
 app.use(`${api}/orders`, ordersRouter);
@@ -30,6 +33,7 @@ const Product = require('./models/product');
 const Category = require('./models/category'); 
 const Order = require('./models/order'); 
 const User = require('./models/user'); 
+const authJwt = require('./helpers/jwt');
 
 
 mongoose.connect(process.env.CONNECTION_STRING, {
