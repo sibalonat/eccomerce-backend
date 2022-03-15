@@ -120,11 +120,11 @@ router.get(`/get/count`, async (req, res) => {
 });
 
 router.delete(`/:id`, (req, res) => {
-    Category.findByIdAndRemove(req.params.id).then(category => {
-        if (category) {
-            return res.status(200).json({success: true, message: 'category deleted successfuly'})
+    User.findByIdAndRemove(req.params.id).then(user => {
+        if (user) {
+            return res.status(200).json({success: true, message: 'user deleted successfuly'})
         } else {
-            res.status(404).json({success: false, message: 'could not find the category'})
+            res.status(404).json({success: false, message: 'could not find the user'})
         }
     }).catch(err => {
         return res.status(400).json({success: false, error: err});
