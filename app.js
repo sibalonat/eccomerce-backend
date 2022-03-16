@@ -25,6 +25,7 @@ const usersRouter = require('./routers/users');
 app.use(express.json());
 app.use(morgan('tiny'));
 app.use(authJwt());
+app.use('/public/uploads', express.static(__dirname + '/public/uploads'));
 app.use(errorHandler)
 
 app.use(`${api}/products`, productsRouter);
