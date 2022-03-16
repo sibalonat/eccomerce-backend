@@ -9,3 +9,4 @@ The The back-end uses technologies and modules such as:
 - "mongoose" -> connection to mongodb
 - "morgan"
 - "nodemon" -> server
+- "multer" -> image and file managment
