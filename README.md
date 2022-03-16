@@ -3,7 +3,7 @@ The The back-end uses technologies and modules such as:
 
 - "bcryptjs" -> hashing the password
 - "cors" -> same route or different route, same response 
-- "dotenv" -> support for env files where you could store configuration files
+- "dotenv" -> support for env files where you could store configuration data
 - "express" -> router, server, and methods
 - "jsonwebtoken" -> authentication
 - "mongoose" -> connection to mongodb
